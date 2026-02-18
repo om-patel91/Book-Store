@@ -10,6 +10,7 @@ const DeleteBooks = () => {
   const navigate = useNavigate();
   const {id} = useParams();
   const {enqueueSnackbar} = useSnackbar();
+
   const handleDeleteBook = () =>{
     setLoading(true);
     axios
@@ -26,6 +27,7 @@ const DeleteBooks = () => {
         console.log(error);
     })
   }
+  
   return (
     <div className='p-4'>
       <BackButton />

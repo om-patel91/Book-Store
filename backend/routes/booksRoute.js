@@ -62,7 +62,6 @@ router.put("/:id",async(req,res)=>{
         }
 
         const {id} = req.params;
-
         const result = await Book.findByIdAndUpdate(id, req.body);
 
         if(!result) {

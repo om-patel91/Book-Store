@@ -5,8 +5,6 @@ import axios from "axios";
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar} from "notistack";
 
-
-
 const EditBook = () => {
   const[title, setTitle] = useState("");
     const[author,setAuthor] = useState("");
@@ -15,6 +13,7 @@ const EditBook = () => {
     const navigate = useNavigate();
     const {enqueueSnackbar} = useSnackbar();
     const {id} = useParams();
+    
     useEffect(()=>{
       setLoading(true);
       axios.get(`http://localhost:5555/books/${id}`)
