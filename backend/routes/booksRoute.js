@@ -35,7 +35,7 @@ router.get("",async (req,res) => {
         );
     } catch (error) {
         console.log(error.message);
-        response.status(500).send({messgae: error.message});
+        res.status(500).send({messgae: error.message});
     }
 })
 
